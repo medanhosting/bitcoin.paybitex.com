@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteBase /
+RewriteRule ^(register|forgot-password|logout|faq)?$ index.php?a=$1 [L]
+RewriteRule ^password/change/(.*)?$ index.php?a=password-change&hash=$1 [L]
+RewriteRule ^account/(wallet|transactions|addresses|security)?$ index.php?a=account&b=$1 [L]
+RewriteRule ^account/transactions/(.*)?$ index.php?a=account&b=transactions&page=$1 [L]
+RewriteRule ^account/transactions_by_address/(.*)?$ index.php?a=account&b=transactions&address=$1 [L]
